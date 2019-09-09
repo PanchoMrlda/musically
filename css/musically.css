@@ -1,0 +1,82 @@
+.body {
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.app-title {
+  color: #d63f29;
+  font: bold 18px arial;
+  margin: auto 0;
+}
+
+a, a:visited {
+  color: #d63f29 !important;
+  text-decoration: none !important;
+}
+
+.menu-icon, .menu-profile {
+  margin: auto 0;
+}
+
+.login-form, .register-form {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #DCDCDC;
+  display: none;
+  flex-direction: column;
+}
+
+.register-form {
+  display: none;
+}
+
+.login-form-username, .login-form-password, .register-form-username, .register-form-password {
+  max-width: 240px;
+  margin: 18px auto 0px auto;
+}
+
+.login-form-submit, .register-form-submit {
+  width: 85px;
+  text-align: center;
+  margin: 12px auto 12px auto;
+  z-index: 1;
+}
+
+.login-not-registered {
+  margin: -21px 9px 3px 0;
+  font-size: 12px;
+  display: block;
+  text-align: right;
+  color: #6c757d;
+}
+
+.login-forgot-password {
+  margin: -21px 9px 3px 9px;
+  font-size: 12px;
+  display: block;
+  text-align: left;
+  color: #6c757d;
+}
+
+.register-password-desc {
+  max-width: 240px;
+  font-size: 12px;
+  display: block;
+  margin: 9px auto -9px auto;
+  text-align: center;
+}
+
+.login-not-registered:hover, .login-forgot-password:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+}
