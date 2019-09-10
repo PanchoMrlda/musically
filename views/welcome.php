@@ -20,13 +20,16 @@
     <section class="header">
       <span class="material-icons menu-icon" style="font-size:24px;">menu</span>
       <span class="app-title text-center"><a href="/">MUSICALLY</a></span>
-      <span class="material-icons menu-profile" style="font-size:24px; <?php if (isset($_SESSION['userId'])) {
-                                                                          echo 'color:green';
-                                                                        } ?>">person</span>
+      <span class="material-icons menu-profile" style="<?php if (isset($_SESSION['userId'])) {
+                                                          echo 'color:green';
+                                                        } ?>">person</span>
     </section>
     <section class="side-menu">
       <span class="settings">Settings</span>
+      <span class="contact-us">Contact Us</span>
+      <span class="contact-us">About</span>
       <?php if (isset($_SESSION['userId'])) {
+        echo '<span class="logout">Friends</span>';
         echo '<span class="logout">Log Out</span>';
       } ?>
     </section>
@@ -51,6 +54,8 @@
   <?php
   if (!isset($_SESSION['userId'])) {
     include $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/login.php';
+  } else {
+    include $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/sessionOptions.php';
   }
   ?>
 
