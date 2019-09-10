@@ -39,6 +39,12 @@ $("#register-btn").click(function () {
 $(".menu-profile").click(function () {
   var loginDisplay = $("#login-form").css("display") == "flex";
   var registerDisplay = $("#register-form").css("display") == "flex";
+  var sideMenuDisplay = $(".side-menu").css("display") == "flex";
+  if (sideMenuDisplay) {
+    $(".side-menu").css({
+      "display": "none"
+    });
+  }
   if (loginDisplay || registerDisplay) {
     $("#login-form").slideUp(500);
     $("#register-form").slideUp(500);
@@ -67,20 +73,14 @@ $(".login-not-registered").click(function () {
   }
 });
 
-
 $(".side-menu").hide();
 
 $(".menu-icon").click(function () {
-  var sideMenuDisplay = $(".side-menu").css("display") == "flex";
-  if (sideMenuDisplay) {
-    $(".side-menu").animate({
-      width: 'toggle'
-    }, 1000);
-  } else {
-    $(".side-menu").animate({
-      width: 'toggle'
-    }, 1000);
-  }
+  $("#login-form").hide();
+  $("#register-form").hide();
+  $(".side-menu").animate({
+    width: 'toggle'
+  }, 1000);
 });
 
 $(".logout").click(function () {
@@ -156,7 +156,8 @@ function registerUser() {
       repeatedPassword: repeatedPassword
     },
     success: function () {
-      toggleLoginModal(REGISTER_SUCCESSFULL, REGISTER_SUCCESSFULL);
+      // toggleLoginModal(REGISTER_SUCCESSFULL, REGISTER_SUCCESSFULL);
+      window.location = "/";
     },
     error: function (response) {
       toggleLoginModal(REGISTER_ERROR, JSON.parse(response.responseText).message);
