@@ -80,7 +80,7 @@ $(".menu-icon").click(function () {
   $("#register-form").hide();
   $(".side-menu").animate({
     width: 'toggle'
-  }, 1000);
+  }, 500);
 });
 
 $(".logout").click(function () {
