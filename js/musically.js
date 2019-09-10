@@ -76,6 +76,9 @@ $(".login-not-registered").click(function () {
 $(".side-menu").hide();
 
 $(".menu-icon").click(function () {
+  var headerHeight = parseInt($(".header").css("height"));
+  var totalHeight = screen.height - headerHeight - 21;
+  $(".side-menu").css("height", totalHeight);
   $("#login-form").hide();
   $("#register-form").hide();
   $(".side-menu").animate({
