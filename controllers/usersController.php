@@ -35,6 +35,7 @@ if (isset($_POST['registerButton'])) {
     $user->setName($_POST['username']);
     $user->setPassword(sha1($_POST['password']));
     $user->save();
+    $_SESSION['userId'] = $user->getId();
   } catch (\Throwable $th) {
     if (strpos($th->getMessage(), 'Duplicate entry')) {
       header('HTTP/1.1 422 Unprocessable Entity');
