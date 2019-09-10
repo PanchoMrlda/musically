@@ -40,6 +40,11 @@ a, a:visited {
   margin: 18px auto 0px auto;
 }
 
+.login-btn-container, .register-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .login-form-submit, .register-form-submit {
   width: 85px;
   text-align: center;
@@ -48,19 +53,21 @@ a, a:visited {
 }
 
 .login-not-registered {
-  margin: -21px 9px 3px 0;
+  margin: 0 9px 3px 9px;
   font-size: 12px;
   display: block;
   text-align: right;
   color: #6c757d;
+  align-self: flex-end;
 }
 
 .login-forgot-password {
-  margin: -21px 9px 3px 9px;
+  margin: 0 9px 3px 9px;
   font-size: 12px;
   display: block;
   text-align: left;
   color: #6c757d;
+  align-self: flex-end;
 }
 
 .register-password-desc {
@@ -69,6 +76,10 @@ a, a:visited {
   display: block;
   margin: 9px auto -9px auto;
   text-align: center;
+}
+
+.register-btn-container .hidden-span {
+  visibility: hidden;
 }
 
 .login-not-registered:hover, .login-forgot-password:hover {

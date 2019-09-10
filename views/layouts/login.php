@@ -1,9 +1,11 @@
 <section id="login-form" class="login-form">
   <input type="text" id="login-username" name="username" class="login-form-username" placeholder="USER NAME">
   <input type="password" id="login-password" name="password" class="login-form-password" placeholder="PASSWORD">
-  <input type="submit" id="login-btn" name="loginButton" class="login-form-submit btn btn-secondary align-items-center" value="Log In">
-  <span id="login-not-registered" class="login-not-registered">Not registered?</span>
-  <span id="login-forgot-password" class="login-forgot-password">Forgot passwd?</span>
+  <div class="login-btn-container">
+    <span id="login-forgot-password" class="login-forgot-password">Forgot passwd?</span>
+    <input type="submit" id="login-btn" name="loginButton" class="login-form-submit btn btn-secondary align-items-center" value="Log In">
+    <span id="login-not-registered" class="login-not-registered">Not registered?</span>
+  </div>
 </section>
 
 <section id="register-form" class="register-form">
@@ -11,8 +13,11 @@
   <input type="password" id="register-password" name="password" class="register-form-password" placeholder="PASSWORD*" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
   <input type="password" id="register-repeat-password" name="repeat-password" class="register-form-password" placeholder="REPEAT PASSWORD">
   <span class="register-password-desc"><sup>* Must contain at least one number, one uppercase and lowercase letter and at least 8 or more characters</sup></span>
-  <input type="submit" id="register-btn" name="registerButton" class="register-form-submit btn btn-secondary align-items-center" value="Register">
-  <span id="register-back-to" class="login-not-registered">Back to Log In</span>
+  <div class="register-btn-container">
+    <span class="hidden-span">Hidden span</span>
+    <input type="submit" id="register-btn" name="registerButton" class="register-form-submit btn btn-secondary align-items-center" value="Register">
+    <span id="register-back-to" class="login-not-registered">Back to Log In</span>
+  </div>
 </section>
 
 <!-- The Modal -->
