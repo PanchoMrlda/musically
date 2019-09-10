@@ -14,16 +14,19 @@
   margin: auto 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: #d63f29 !important;
   text-decoration: none !important;
 }
 
-.menu-icon, .menu-profile {
+.menu-icon,
+.menu-profile {
   margin: auto 0;
 }
 
-.login-form, .register-form {
+.login-form,
+.register-form {
   max-width: 300px;
   margin: 0 auto;
   background-color: #DCDCDC;
@@ -35,17 +38,22 @@ a, a:visited {
   display: none;
 }
 
-.login-form-username, .login-form-password, .register-form-username, .register-form-password {
+.login-form-username,
+.login-form-password,
+.register-form-username,
+.register-form-password {
   max-width: 240px;
   margin: 18px auto 0px auto;
 }
 
-.login-btn-container, .register-btn-container {
+.login-btn-container,
+.register-btn-container {
   display: flex;
   justify-content: space-between;
 }
 
-.login-form-submit, .register-form-submit {
+.login-form-submit,
+.register-form-submit {
   width: 85px;
   text-align: center;
   margin: 12px auto 12px auto;
@@ -78,16 +86,35 @@ a, a:visited {
   text-align: center;
 }
 
-.register-btn-container .hidden-span {
+.hidden-span {
   visibility: hidden;
 }
 
-.login-not-registered:hover, .login-forgot-password:hover {
+.login-not-registered:hover,
+.login-forgot-password:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
 .side-menu {
+  height: calc(100% - 24px);
+  width: calc(100% - 24px);
+  background-color: #DCDCDC;
   display: flex;
   flex-direction: column;
+  margin: 12px;
+}
+
+.side-menu span {
+  text-align: center;
+  white-space: pre;
+  margin: 6px 0;
+}
+
+.side-menu span:first-child {
+  margin-top: 12px;
+}
+
+.side-menu span:last-child {
+  margin-bottom: 12px;
 }
