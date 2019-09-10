@@ -26,12 +26,17 @@ a:visited {
 }
 
 .login-form,
-.register-form {
+.register-form,
+.session-options {
   max-width: 300px;
   margin: 0 auto;
   background-color: #DCDCDC;
   display: none;
   flex-direction: column;
+}
+
+.session-options {
+  /* flex-direction: row; */
 }
 
 .register-form {
@@ -97,24 +102,45 @@ a:visited {
 }
 
 .side-menu {
-  height: calc(100% - 24px);
   width: calc(100% - 24px);
   background-color: #DCDCDC;
   display: flex;
   flex-direction: column;
   margin: 12px;
+  position: absolute;
 }
 
 .side-menu span {
   text-align: center;
   white-space: pre;
-  margin: 6px 0;
+  margin: 24px 0;
 }
 
 .side-menu span:first-child {
-  margin-top: 12px;
+  margin-top: 36px;
 }
 
 .side-menu span:last-child {
-  margin-bottom: 12px;
+  margin-bottom: 36px;
+}
+
+.material-icons {
+  font-size: 24px;
+}
+
+.session-option .available {
+  color: green;
+  font-size: 48px;
+}
+
+.session-option .busy {
+  color: red;
+}
+
+.session-option .offline {
+  color: black;
+}
+
+.session-option {
+  margin-left: 100px;
 }
