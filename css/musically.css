@@ -35,10 +35,6 @@ a:visited {
   flex-direction: column;
 }
 
-.session-options {
-  /* flex-direction: row; */
-}
-
 .register-form {
   display: none;
 }
@@ -124,23 +120,11 @@ a:visited {
   margin-bottom: 36px;
 }
 
-.material-icons {
+.session-option .material-icons {
   font-size: 24px;
-}
-
-.session-option .available {
-  color: green;
-  font-size: 48px;
-}
-
-.session-option .busy {
-  color: red;
-}
-
-.session-option .offline {
-  color: black;
+  vertical-align: -5px;
 }
 
 .session-option {
-  margin-left: 100px;
+  margin: 9px 0 9px 21px;
 }
