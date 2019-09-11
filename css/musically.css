@@ -14,6 +14,11 @@
   margin: auto 0;
 }
 
+.contact-title {
+  font: bold 18px arial;
+  /* margin-top: 12px; */
+}
+
 a,
 a:visited {
   color: #d63f29 !important;
@@ -27,22 +32,33 @@ a:visited {
 
 .login-form,
 .register-form,
-.session-options {
+.session-options,
+.contact-form {
   max-width: 300px;
+  min-width: 288px;
   margin: 0 auto;
   background-color: #DCDCDC;
   display: none;
   flex-direction: column;
+  position: absolute;
+  left: 15px;
+  z-index: 1;
 }
 
-.register-form {
-  display: none;
+.contact-form {
+  display: flex;
+  position: inherit;
+  z-index: 0;
 }
 
 .login-form-username,
 .login-form-password,
 .register-form-username,
-.register-form-password {
+.register-form-password,
+.contact-form-name,
+.contact-form-email,
+.contact-title,
+.contact-content {
   max-width: 240px;
   margin: 18px auto 0px auto;
 }
@@ -127,4 +143,14 @@ a:visited {
 
 .session-option {
   margin: 9px 0 9px 21px;
+}
+
+.side-menu-input-submit,
+.side-menu-input-hidden {
+  display: none;
+}
+
+.contact-content {
+  width: calc(100% - 12px);
+  margin-bottom: 15px;
 }
