@@ -4,7 +4,6 @@
 
 const LOGIN_ERROR = "Wrong credentials";
 const REGISTER_ERROR = "Wrong parameters";
-const REGISTER_SUCCESSFULL = "Welcome to Musically";
 const WRONG_PASSWORD_ERROR = "Please, read the password requirements";
 
 /**
@@ -40,15 +39,19 @@ $(".menu-profile").click(function () {
   var loginDisplay = $("#login-form").css("display") == "flex";
   var registerDisplay = $("#register-form").css("display") == "flex";
   var sideMenuDisplay = $(".side-menu").css("display") == "flex";
+  var color = loggedIn ? "green" : "black";
+  $(".material-icons.menu-icon").text("menu");
   if (sideMenuDisplay) {
     $(".side-menu").css({
       "display": "none"
     });
   }
   if (loginDisplay || registerDisplay) {
+    $(".material-icons.menu-profile").text("person").css("color", color);
     $("#login-form").slideUp(350);
     $("#register-form").slideUp(350);
   } else {
+    $(".material-icons.menu-profile").text("close").css("color", "black");
     $("#login-form").slideDown(350);
     $("#login-form").css({
       "display": "flex"
@@ -78,6 +81,13 @@ $(".side-menu").hide();
 $(".menu-icon").click(function () {
   var headerHeight = parseInt($(".header").css("height"));
   var totalHeight = $(document).height() - headerHeight - 21;
+  var color = loggedIn ? "green" : "black";
+  if ($(".side-menu").is(":visible")) {
+    $(".material-icons.menu-icon").text("menu");
+  } else {
+    $(".material-icons.menu-icon").text("close");
+  }
+  $(".material-icons.menu-profile").text("person").css("color", color);
   $(".side-menu").css("height", totalHeight);
   $("#login-form").hide();
   $("#register-form").hide();
@@ -159,7 +169,6 @@ function registerUser() {
       repeatedPassword: repeatedPassword
     },
     success: function () {
-      // toggleLoginModal(REGISTER_SUCCESSFULL, REGISTER_SUCCESSFULL);
       window.location = "/";
     },
     error: function (response) {
@@ -197,3 +206,5 @@ function logoutUser() {
     }
   });
 }
+
+var loggedIn = $(".material-icons.menu-profile").css("color") == "rgb(0, 128, 0)";
