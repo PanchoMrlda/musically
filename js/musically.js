@@ -46,10 +46,10 @@ $(".menu-profile").click(function () {
     });
   }
   if (loginDisplay || registerDisplay) {
-    $("#login-form").slideUp(500);
-    $("#register-form").slideUp(500);
+    $("#login-form").slideUp(350);
+    $("#register-form").slideUp(350);
   } else {
-    $("#login-form").slideDown(500);
+    $("#login-form").slideDown(350);
     $("#login-form").css({
       "display": "flex"
     });
@@ -59,14 +59,14 @@ $(".menu-profile").click(function () {
 $(".login-not-registered").click(function () {
   var display = $("#register-form").css("display") == "none";
   if (display) {
-    $("#login-form").slideUp(500);
-    $("#register-form").slideDown(500);
+    $("#login-form").slideUp(350);
+    $("#register-form").slideDown(350);
     $("#register-form").css({
       "display": "flex"
     });
   } else {
-    $("#register-form").slideUp(500);
-    $("#login-form").slideDown(500);
+    $("#register-form").slideUp(350);
+    $("#login-form").slideDown(350);
     $("#login-form").css({
       "display": "flex"
     });
@@ -83,7 +83,7 @@ $(".menu-icon").click(function () {
   $("#register-form").hide();
   $(".side-menu").animate({
     width: 'toggle'
-  }, 500);
+  }, 350);
 });
 
 $(".logout").click(function () {
