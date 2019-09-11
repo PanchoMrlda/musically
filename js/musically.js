@@ -100,9 +100,10 @@ $(".logout").click(function () {
   logoutUser();
 });
 
-// setInterval(function () {
-
-// }, 1500);
+$(".side-menu .contact-us").click(function () {
+  $(".side-menu-input-hidden").val(this.getAttribute("name"));
+  $(".side-menu-input-submit").click();
+});
 
 /**
  * USABLE FUNCTIONS
