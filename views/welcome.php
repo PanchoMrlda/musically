@@ -24,15 +24,14 @@
                                                           echo 'color:green';
                                                         } ?>">person</span>
     </section>
-    <section class="side-menu">
-      <span class="settings">Settings</span>
-      <span class="contact-us">Contact Us</span>
-      <span class="contact-us">About</span>
-      <?php if (isset($_SESSION['userId'])) {
-        echo '<span class="logout">Friends</span>';
-        echo '<span class="logout">Log Out</span>';
-      } ?>
-    </section>
+    <?php
+    if (!isset($_SESSION['userId'])) {
+      include $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/login.php';
+    } else {
+      include $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/sessionOptions.php';
+    }
+    ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/sideMenu.php'; ?>
     <!-- <form action="/" method="post">
       <input class="btn btn-primary align-items-center" type="submit" name="start" value="START">
       <?php if (isset($_SESSION['id'])) {
@@ -48,17 +47,7 @@
         <textarea id="chat-content" name="chat-content"></textarea>
       </div>
     </form> -->
-
   </section>
-
-  <?php
-  if (!isset($_SESSION['userId'])) {
-    include $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/login.php';
-  } else {
-    include $_SERVER['DOCUMENT_ROOT'] . '/views/layouts/sessionOptions.php';
-  }
-  ?>
-
   <script async type="text/javascript" src="js/musically.js" defer></script>
 </body>
 
